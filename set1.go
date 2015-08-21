@@ -30,3 +30,16 @@ func SToH(utfString string) string {
 func HTo64(hexString string) string {
 	return STo64(HToS(hexString))
 }
+
+// HeXor Returnes the xor between two hexa strings as a hexa string
+func HeXor(first, second string) string {
+	result := []byte{}
+	first = HToS(first)
+	second = HToS(second)
+
+	for i := range first {
+		result = append(result, first[i]^second[i])
+	}
+
+	return SToH(string(result))
+}
