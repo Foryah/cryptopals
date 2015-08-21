@@ -15,3 +15,10 @@ func TestChall2(t *testing.T) {
 		t.Error("YOU SHALL NOT PASS !")
 	}
 }
+
+func TestChall3(t *testing.T) {
+	if GetBestEnglishMatch(GetAllOneLetterHexXor("1b37373331363f78151b7f2b783431333d78397828372d363c78373e783a393b3736")) != "Cooking MC's like a pound of bacon" {
+		t.Error("YOU SHALL NOT PASS !")
+	}
+
+}
