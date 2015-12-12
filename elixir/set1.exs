@@ -33,6 +33,84 @@ defmodule Set1 do
 
   defp xor_lists([h1], [h2]), do: h1 ^^^ h2
   defp xor_lists([h1|t1], [h2|t2]), do: [h1 ^^^ h2, xor_lists(t1, t2)]
+
+  def single_byte_xor(hex_string) do
+    hex_string
+    |> decrypt_with_keys_in_range(0..255)
+    |> append_scores_to_results() 
+    |> select_best_result([])
+  end
+
+  defp append_scores_to_results(result_list) do
+    result_list
+    |> Enum.map(fn(line) -> append_score_to_one_line(line) end)
+  end
+
+  defp append_score_to_one_line(line) do
+    [_, {_, result}] = line
+    line ++ [score: score_for_line(result)]
+  end
+
+  defp score_for_line(line) do
+    char_list = to_char_list(line)
+    do_score_for_line(char_list)
+  end
+
+  defp do_score_for_line([]), do: 0
+  defp do_score_for_line([head|tail]), do: score_for_letter([head]) + do_score_for_line(tail)
+
+  defp score_for_letter(letter) do
+    s_letter = String.downcase(to_string(letter))
+    case s_letter do
+      "e" -> 13
+      "t" -> 9
+      "a" -> 8
+      "o" -> 8
+      "n" -> 7
+      "i" -> 7
+      "r" -> 7
+      "s" -> 6
+      "h" -> 6
+      "l" -> 4
+      "d" -> 4
+      "c" -> 3
+      "u" -> 3
+      "p" -> 3
+      "f" -> 3
+      "m" -> 2
+      "w" -> 2
+      "y" -> 2
+      "b" -> 1
+      "g" -> 1
+      "v" -> 1
+      " " -> 4
+      _ -> 0
+    end
+  end
+
+  defp select_best_result([], best), do: best
+  defp select_best_result([head|tail], best) when best == [], do: select_best_result(tail, head)
+  defp select_best_result([head|tail], best) do
+    [_, _, {_, score}] = head
+    [_, _, {_, best_score}] = best
+    if best_score > score do
+      select_best_result(tail, best)
+    else
+      select_best_result(tail, head)
+    end
+  end
+
+  defp decrypt_with_keys_in_range(input, range) do
+    Enum.map(range, fn(key) -> [key: key, result: byte_xor_line(key, input)] end)
+  end
+
+  defp byte_xor_line(byte, line) do 
+    Enum.map(1..trunc(String.length(line)/2), fn(_) -> byte end)
+    |> to_string 
+    |> str_to_hex
+    |> hex_xor(line)
+    |> hex_to_str
+  end
 end
 
 
@@ -56,5 +134,11 @@ defmodule TestSet1 do
 
   test "Hex XOR Hex" do
     assert Set1.hex_xor("1c0111001f010100061a024b53535009181c", "686974207468652062756c6c277320657965") == "746865206b696420646f6e277420706c6179"
+  end
+
+  test "Single byte xor" do
+    [_, {_, result}, _] = Set1.single_byte_xor("1b37373331363f78151b7f2b783431333d78397828372d363c78373e783a393b3736")
+    assert result == "Cooking MC's like a pound of bacon"
+
   end
 end
