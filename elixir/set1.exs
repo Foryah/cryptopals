@@ -1,15 +1,8 @@
 defmodule Set1 do                                                             
   use Bitwise
 
-  def hex_to_str(hex_input) do
-    hex_input
-    |> Base.decode16!(case: :lower) 
-  end
-
-  def str_to_hex(str_input) do
-    str_input
-    |> Base.encode16(case: :lower)
-  end
+  def hex_to_str(hex_input), do: Base.decode16!(hex_input, case: :lower) 
+  def str_to_hex(str_input), do: Base.encode16(str_input, case: :lower)
 
   def hex_to_b64(hex_input) do
     hex_input
@@ -101,15 +94,23 @@ defmodule Set1 do
   end
 
   defp decrypt_with_keys_in_range(input, range) do
-    Enum.map(range, fn(key) -> [key: key, result: byte_xor_line(key, input)] end)
+    Enum.map(range, fn(key) -> [key: key, result: byte_xor_line(input, <<key :: size(8)>>)] end)
   end
 
-  defp byte_xor_line(byte, line) do 
+  defp byte_xor_line(line, byte) do 
     Enum.map(1..trunc(String.length(line)/2), fn(_) -> byte end)
     |> to_string 
     |> str_to_hex
     |> hex_xor(line)
     |> hex_to_str
+  end
+
+  def file_single_byte_xor(path_to_file) do
+    path_to_file
+    |> File.read!
+    |> String.split("\n")
+    |> Enum.map(&single_byte_xor(&1))
+    |> select_best_result([])
   end
 end
 
@@ -139,6 +140,9 @@ defmodule TestSet1 do
   test "Single byte xor" do
     [_, {_, result}, _] = Set1.single_byte_xor("1b37373331363f78151b7f2b783431333d78397828372d363c78373e783a393b3736")
     assert result == "Cooking MC's like a pound of bacon"
+  end
 
+  test "File Single byte xor" do
+    Set1.file_single_byte_xor("../data/xored_data")
   end
 end
