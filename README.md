@@ -1,7 +1,6 @@
 ## The Matasano crypto challenges
 
-#### [Set 1](http://cryptopals.com/sets/1/)
-|        Set 1       |     Go Solution   |  Elixir Solution  |    C Solution    |
+|    [Set 1][set1]   |     Go Solution   |  Elixir Solution  |    C Solution    |
 |--------------------|-------------------|-------------------|------------------|
 | [Challange 1][ch1] |  [Solved][ch1go]  |  [Solved][ch1el]  | [Unsolved][ch1c] |
 | [Challange 2][ch2] |  [Solved][ch2go]  |  [Solved][ch2el]  | [Unsolved][ch2c] |
@@ -12,7 +11,7 @@
 | [Challange 7][ch4] | [Unsolved][ch7go] | [Unsolved][ch7el] | [Unsolved][ch7c] |
 | [Challange 8][ch4] | [Unsolved][ch8go] | [Unsolved][ch8el] | [Unsolved][ch8c] |
 
-
+[set1]: http://cryptopals.com/sets/1/
 [ch1]: http://cryptopals.com/sets/1/challenges/1/
 [ch1go]: https://github.com/Foryah/cryptopals/commit/bd7e0572f75768b01f2607d91f32f00b8e4afccd
 [ch1el]: https://github.com/Foryah/cryptopals/commit/2c46cc983b31a27fce9584f0f2f9f2b0e68343a6
