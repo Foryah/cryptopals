@@ -14,7 +14,16 @@ defmodule Set1 do
   def hex_xor(hex_input1, hex_input2) do
     input1 = hex_to_str(hex_input1)
     input2 = hex_to_str(hex_input2)
-
+    unless String.valid?(input1) do
+      IO.inspect input1
+      IO.inspect hex_input1
+      IO.inspect to_char_list(hex_input1)
+    end
+    unless String.valid?(input2) do
+      IO.inspect input2
+      IO.inspect hex_input2 <> <<0>>
+      IO.inspect to_char_list(hex_input2)
+    end
     input1_char_list = to_char_list(input1)
     input2_char_list = to_char_list(input2)
 
@@ -94,7 +103,7 @@ defmodule Set1 do
   end
 
   defp decrypt_with_keys_in_range(input, range) do
-    Enum.map(range, fn(key) -> [key: key, result: byte_xor_line(input, <<key :: size(8)>>)] end)
+    Enum.map(range, fn(key) -> [key: key, result: byte_xor_line(input, key)] end)
   end
 
   defp byte_xor_line(line, byte) do 
