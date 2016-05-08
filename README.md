@@ -2,7 +2,7 @@
 
 |    [Set 1][set1]   |     Go Solution   |  Elixir Solution  |    C Solution    |      Python      |
 |--------------------|-------------------|-------------------|------------------|------------------|
-| [Challange 1][ch1] |  [Solved][ch1go]  |  [Solved][ch1el]  | [Unsolved][ch1c] | [Unsolved][ch1p] |
+| [Challange 1][ch1] |  [Solved][ch1go]  |  [Solved][ch1el]  | [Unsolved][ch1c] |  [Solved][ch1p]  |
 | [Challange 2][ch2] |  [Solved][ch2go]  |  [Solved][ch2el]  | [Unsolved][ch2c] | [Unsolved][ch2p] |
 | [Challange 3][ch3] |  [Solved][ch3go]  |  [Solved][ch3el]  | [Unsolved][ch3c] | [Unsolved][ch3p] | 
 | [Challange 4][ch4] | [Unsolved][ch4go] | [Unsolved][ch4el] | [Unsolved][ch4c] | [Unsolved][ch4p] | 
