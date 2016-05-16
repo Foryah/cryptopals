@@ -3,7 +3,7 @@
 |    [Set 1][set1]   |     Go Solution   |  Elixir Solution  |    C Solution    |      Python      |
 |--------------------|-------------------|-------------------|------------------|------------------|
 | [Challange 1][ch1] |  [Solved][ch1go]  |  [Solved][ch1el]  | [Unsolved][ch1c] |  [Solved][ch1p]  |
-| [Challange 2][ch2] |  [Solved][ch2go]  |  [Solved][ch2el]  | [Unsolved][ch2c] | [Unsolved][ch2p] |
+| [Challange 2][ch2] |  [Solved][ch2go]  |  [Solved][ch2el]  | [Unsolved][ch2c] |  [Solved][ch2p]  |
 | [Challange 3][ch3] |  [Solved][ch3go]  |  [Solved][ch3el]  | [Unsolved][ch3c] | [Unsolved][ch3p] | 
 | [Challange 4][ch4] | [Unsolved][ch4go] | [Unsolved][ch4el] | [Unsolved][ch4c] | [Unsolved][ch4p] | 
 | [Challange 5][ch4] | [Unsolved][ch5go] | [Unsolved][ch5el] | [Unsolved][ch5c] | [Unsolved][ch5p] | 
@@ -22,7 +22,7 @@
 [ch2go]: https://github.com/Foryah/cryptopals/commit/e8105e94851fff5429481dfdcf95ffeb8765850f
 [ch2el]: https://github.com/Foryah/cryptopals/commit/6ad070eec993e99d0965fd0a1adfc7340695e27b
 [ch2c]: #
-[ch2p]: #
+[ch2p]: https://github.com/Foryah/cryptopals/commit/2529116ee0e281bf4690c576068839643a527ba2
 
 [ch3]: http://cryptopals.com/sets/1/challenges/3
 [ch3go]: https://github.com/Foryah/cryptopals/commit/60cae0a4cd42430bd4eba9415d05b08e9195a75f
