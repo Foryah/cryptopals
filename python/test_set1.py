@@ -17,5 +17,10 @@ class TestSet1(unittest.TestCase):
 
         self.assertEqual(set1.heXor(str1, str2), "746865206b696420646f6e277420706c6179")
 
+    def test_challange3(self):
+        input_str = "1b37373331363f78151b7f2b783431333d78397828372d363c78373e783a393b3736"
+
+        self.assertEqual(set1.single_byte_xor_cipher(input_str), "Cooking MC's like a pound of bacon")
+
 if __name__ == '__main__':
     unittest.main()
