@@ -92,7 +92,7 @@ def get_str_value(input_str):
     return total_value
 
 
-def single_byte_xor_cipher(encrypted_hex_str):
+def single_byte_xor_cipher_str(encrypted_hex_str):
     best_value = 0
     best_str = ""
     best_key = 0
@@ -105,5 +105,23 @@ def single_byte_xor_cipher(encrypted_hex_str):
             best_value = str_value
             best_str = decrypted_str
             best_key = key
+
+    return best_str
+
+
+def single_byte_xor_cipher_file(file_name):
+    # TODO: You need to rewrite all the operations ( xor ) to happen on a bit level
+    #       not on the hex level...
+    best_value = 0
+    best_str = ""
+
+    with open(file_name, "r") as f:
+        line = f.readline()
+        decrypted_str = single_byte_xor_cipher_str(line)
+        str_value = get_str_value(decrypted_str)
+
+        if str_value > best_value:
+            best_value = str_value
+            best_str = decrypted_str
 
     return best_str

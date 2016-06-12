@@ -20,7 +20,12 @@ class TestSet1(unittest.TestCase):
     def test_challange3(self):
         input_str = "1b37373331363f78151b7f2b783431333d78397828372d363c78373e783a393b3736"
 
-        self.assertEqual(set1.single_byte_xor_cipher(input_str), "Cooking MC's like a pound of bacon")
+        self.assertEqual(set1.single_byte_xor_cipher_str(input_str), "Cooking MC's like a pound of bacon")
+
+    def test_challange4(self):
+        input_file_name = "../data/xored_data"
+
+        self.assertEqual(set1.single_byte_xor_cipher_file(input_file_name), " ? ")
 
 if __name__ == '__main__':
     unittest.main()
