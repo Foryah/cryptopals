@@ -76,7 +76,7 @@ class BitString(object):
         self._process_string(string)
 
     def set_byte(self, byte_arr):
-        if type(byte_arr) != list:
+        if type(byte_arr) != bytearray:
             raise ValueError("Unable to set byte for : {} {}"
                              .format(type(byte_arr), byte_arr))
 
@@ -105,7 +105,7 @@ class BitString(object):
 
     # ########################### HELPER FUNCTIONS ############################### #
     def _process_string(self, input_string):
-        self.byte_string = bytes(input_string, ENCODING)
+        self.byte_string = bytearray(input_string, ENCODING)
 
         self._sync_with_byte_string()
 
@@ -128,7 +128,7 @@ class BitString(object):
             byte = int(binary, HEX_BASE)
             byte_arr.append(byte)
 
-        return byte_arr
+        return bytearray(byte_arr)
 
     def _bin_to_byte(self, bin_arr):
         byte_arr = []
@@ -136,7 +136,7 @@ class BitString(object):
             byte = int(binary, BINARY_BASE)
             byte_arr.append(byte)
 
-        return byte_arr
+        return bytearray(byte_arr)
 
     def __format_hex_byte(self, hex_string):
         clean_hex_string = hex_string[HEX_HEADER_SIZE:]
