@@ -1,5 +1,6 @@
 import base64
 import binascii
+from lib.solver import Solver
 
 english_letter_values = {"e": 13,
                          "t": 9,
@@ -50,18 +51,28 @@ def hex_str2b64_str(hex_str):
     bin_str = hex_str2bin_str(hex_str)
     return base64.b64encode(bin_str)
 
+# TODO: Maybe this logic should not be here... Maybe another object that
+# knows how to talk with the Solver
 
-def heXor(hex_str1, hex_str2):
-    if len(hex_str1) != len(hex_str2):
+# TODO: Solver is an awful name... rename it to SmartString ?
+
+
+def heXor(smart_string_1, smart_string_2):
+    bytes_1 = smart_string_1.get_bytes()
+    bytes_2 = smart_string_2.get_bytes()
+
+    if len(bytes_1) != len(bytes_2):
         raise ValueError("The two strings have different length")
 
-    hex_val1 = hex_str2int(hex_str1)
-    hex_val2 = hex_str2int(hex_str2)
+    result = bytearray()
 
-    hex_result = hex(hex_val1 ^ hex_val2)
-    hex_str_result = hex2hex_str(hex_result)
+    for i in range(0, len(bytes_1)):
+        result.append(bytes_1[i] ^ bytes_2[i])
 
-    return hex_str_result
+    rs = Solver()
+    rs.load_bytes(result)
+
+    return rs.get_hex()
 
 
 def decrypt_single_byte(encrypted_hex_str, key_int):

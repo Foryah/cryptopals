@@ -17,6 +17,12 @@ class Solver(object):
 
         self._bytes = bytearray(input_bytes)
 
+    def load_bytes(self, bytes_input):
+        self._bytes = bytearray(bytes_input)
+
+    def get_bytes(self):
+        return self._bytes
+
     def get_str(self):
         _str = self._bytes.decode("utf-8")
 
