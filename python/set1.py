@@ -2,6 +2,11 @@ import base64
 import binascii
 from lib.solver import Solver
 
+
+VALUE = "value"
+STRING = "string"
+KEY = "key"
+
 english_letter_values = {"e": 13,
                          "t": 9,
                          "a": 8,
@@ -72,24 +77,23 @@ def heXor(smart_string_1, smart_string_2):
     rs = Solver()
     rs.load_bytes(result)
 
-    return rs.get_hex()
+    return rs
 
 
-def decrypt_single_byte(encrypted_hex_str, key_int):
-    hex_key = int2hex(key_int)
-    hex_str_key = hex2hex_str(hex_key)
+def decrypt_single_byte(smart_string, key_int):
+    message_bytes = smart_string.get_bytes()
+    len_message = len(message_bytes)
 
-    key_len = len(hex_str_key)
-    str_len = len(encrypted_hex_str)
-    padded_hex_key = hex_str_key * int(str_len / key_len)
+    key_bytes = bytearray()
+    for i in range(len_message):
+        key_bytes.append(key_int)
 
-    decrypted_hex_str = heXor(encrypted_hex_str, padded_hex_key)
-    try:
-        decrypted_str = hex_str2bin_str(decrypted_hex_str).decode('utf-8')
-    except (Exception, binascii.Error):
-        decrypted_str = ""
+    key_smart_string = Solver()
+    key_smart_string.load_bytes(key_bytes)
 
-    return decrypted_str
+    result = heXor(smart_string, key_smart_string)
+
+    return result.get_str()
 
 
 def get_str_value(input_str):
@@ -103,36 +107,36 @@ def get_str_value(input_str):
     return total_value
 
 
-def single_byte_xor_cipher_str(encrypted_hex_str):
-    best_value = 0
-    best_str = ""
-    best_key = 0
+def single_byte_xor_cipher_str(smart_string, best_dict=None):
+    if not best_dict:
+        best_dict = {"value": 0}
 
     for key in range(256):
-        decrypted_str = decrypt_single_byte(encrypted_hex_str, key)
-        str_value = get_str_value(decrypted_str)
+        decrypted_str = decrypt_single_byte(smart_string, key)
+        update_best(best_dict, decrypted_str, key)
 
-        if str_value > best_value:
-            best_value = str_value
-            best_str = decrypted_str
-            best_key = key
-
-    return best_str
+    return best_dict
 
 
 def single_byte_xor_cipher_file(file_name):
-    # TODO: You need to rewrite all the operations ( xor ) to happen on a bit level
-    #       not on the hex level...
-    best_value = 0
-    best_str = ""
+    best_dict = {"value": 0}
 
     with open(file_name, "r") as f:
-        line = f.readline()
-        decrypted_str = single_byte_xor_cipher_str(line)
-        str_value = get_str_value(decrypted_str)
+        for line in f.readlines():
+            clean_line = line.strip()
 
-        if str_value > best_value:
-            best_value = str_value
-            best_str = decrypted_str
+            smart_string = Solver()
+            smart_string.load_hex(clean_line)
 
-    return best_str
+            single_byte_xor_cipher_str(smart_string, best_dict)
+
+    return best_dict
+
+
+def update_best(best_dict, decrypted_str, key):
+    str_value = get_str_value(decrypted_str)
+
+    if str_value > best_dict[VALUE]:
+        best_dict[VALUE] = str_value
+        best_dict[STRING] = decrypted_str
+        best_dict[KEY] = key

@@ -2,10 +2,13 @@ import base64
 import binascii
 
 
+UTF8 = "utf-8"
+
+
 class Solver(object):
 
     def load_str(self, input_str):
-        self._bytes = bytearray(input_str, "utf-8")
+        self._bytes = bytearray(input_str, UTF8)
 
     def load_hex(self, hex_str):
         input_bytes = binascii.unhexlify(hex_str)
@@ -24,7 +27,7 @@ class Solver(object):
         return self._bytes
 
     def get_str(self):
-        _str = self._bytes.decode("utf-8")
+        _str = self._bytes.decode(UTF8, errors="replace")
 
         return _str
 
@@ -38,6 +41,6 @@ class Solver(object):
 
     def get_b64(self):
         b64 = base64.b64encode(self._bytes)
-        b64_str = b64.decode("utf-8")
+        b64_str = b64.decode(UTF8)
 
         return b64_str

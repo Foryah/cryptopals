@@ -24,17 +24,26 @@ class TestSet1(unittest.TestCase):
         str2 = "686974207468652062756c6c277320657965"
         s2.load_hex(str2)
 
-        self.assertEqual(set1.heXor(s1, s2), "746865206b696420646f6e277420706c6179")
+        result = set1.heXor(s1, s2)
+        hex_str = result.get_hex()
+        self.assertEqual(hex_str, "746865206b696420646f6e277420706c6179")
 
     def test_challange3(self):
+        s = Solver()
         input_str = "1b37373331363f78151b7f2b783431333d78397828372d363c78373e783a393b3736"
+        s.load_hex(input_str)
 
-        self.assertEqual(set1.single_byte_xor_cipher_str(input_str), "Cooking MC's like a pound of bacon")
+        result_dict = set1.single_byte_xor_cipher_str(s)
+        result_str = result_dict["string"]
+        self.assertEqual(result_str, "Cooking MC's like a pound of bacon")
 
     def test_challange4(self):
         input_file_name = "../data/xored_data"
 
-        self.assertEqual(set1.single_byte_xor_cipher_file(input_file_name), " ? ")
+        result_dict = set1.single_byte_xor_cipher_file(input_file_name)
+        result_str = result_dict["string"]
+
+        self.assertEqual(result_str, "Now that the party is jumping\n")
 
 if __name__ == '__main__':
     unittest.main()
