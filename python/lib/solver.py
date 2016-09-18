@@ -31,18 +31,17 @@ class Solver(object):
 
         return _str
 
+    def get_binary(self):
+        bin_str = ""
+        for byte in self._bytes:
+            bin_str += "{:08b}".format(byte)
+
+        return bin_str
+
     def get_hex(self):
         hex_str = ""
         for byte in self._bytes:
-            _hex = hex(byte)
-            len_hex = len(_hex)
-
-            if len_hex % 2:
-                clean_hex = "{}{}".format("0", _hex[2:])
-            else:
-                clean_hex = "{}".format(_hex[2:])
-
-            hex_str += clean_hex
+            hex_str += "{:02x}".format(byte)
 
         return hex_str
 

@@ -56,6 +56,17 @@ class TestSet1(unittest.TestCase):
 
         self.assertEqual(result_str, "0b3637272a2b2e63622c2e69692a23693a2a3c6324202d623d63343c2a26226324272765272a282b2f20430a652e2c652a3124333a653e2b2027630c692b20283165286326302e27282f")
 
+    def test_hamming(self):
+        smart_1 = Solver()
+        str1 = "this is a test"
+        smart_1.load_str(str1)
+
+        smart_2 = Solver()
+        str2 = "wokka wokka!!!"
+        smart_2.load_str(str2)
+
+        distance = set1.hamming_distance(smart_1, smart_2)
+        self.assertEqual(distance, 37)
 
 if __name__ == '__main__':
     unittest.main()

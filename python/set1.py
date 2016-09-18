@@ -136,3 +136,15 @@ def update_best(best_dict, decrypted_str, key):
         best_dict[VALUE] = str_value
         best_dict[STRING] = decrypted_str
         best_dict[KEY] = key
+
+
+def hamming_distance(smart1, smart2):
+    first_bin = smart1.get_binary()
+    second_bin = smart2.get_binary()
+
+    diff_bits = 0
+    for bit_str_1, bit_str_2 in zip(first_bin, second_bin):
+        if bit_str_1 != bit_str_2:
+            diff_bits += 1
+
+    return diff_bits
