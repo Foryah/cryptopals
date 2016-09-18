@@ -5,7 +5,7 @@ import unittest
 
 class TestSet1(unittest.TestCase):
 
-    def test_challange1(self):
+    def _test_challange1(self):
         s = Solver()
         s.load_hex("49276d206b696c6c696e6720796f757220627261696e206c696b65206120706f69736f6e6f7573206d757368726f6f6d")
 
@@ -15,7 +15,7 @@ class TestSet1(unittest.TestCase):
         b64_str = s.get_b64()
         self.assertEqual(b64_str, "SSdtIGtpbGxpbmcgeW91ciBicmFpbiBsaWtlIGEgcG9pc29ub3VzIG11c2hyb29t")
 
-    def test_challange2(self):
+    def _test_challange2(self):
         s1 = Solver()
         str1 = "1c0111001f010100061a024b53535009181c"
         s1.load_hex(str1)
@@ -28,7 +28,7 @@ class TestSet1(unittest.TestCase):
         hex_str = result.get_hex()
         self.assertEqual(hex_str, "746865206b696420646f6e277420706c6179")
 
-    def test_challange3(self):
+    def _test_challange3(self):
         s = Solver()
         input_str = "1b37373331363f78151b7f2b783431333d78397828372d363c78373e783a393b3736"
         s.load_hex(input_str)
@@ -37,13 +37,25 @@ class TestSet1(unittest.TestCase):
         result_str = result_dict["string"]
         self.assertEqual(result_str, "Cooking MC's like a pound of bacon")
 
-    def test_challange4(self):
+    def _test_challange4(self):
         input_file_name = "../data/xored_data"
 
         result_dict = set1.single_byte_xor_cipher_file(input_file_name)
         result_str = result_dict["string"]
 
         self.assertEqual(result_str, "Now that the party is jumping\n")
+
+    def test_challange5(self):
+        smart_input = Solver()
+        input_str = "Burning 'em, if you ain't quick and nimble\nI go crazy when I hear a cymbal"
+        smart_input.load_str(input_str)
+
+        key = "ICE"
+        result = set1.repeating_key_xor_cipher_str(smart_input, key)
+        result_str = result.get_hex()
+
+        self.assertEqual(result_str, "0b3637272a2b2e63622c2e69692a23693a2a3c6324202d623d63343c2a26226324272765272a282b2f20430a652e2c652a3124333a653e2b2027630c692b20283165286326302e27282f")
+
 
 if __name__ == '__main__':
     unittest.main()

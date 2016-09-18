@@ -1,6 +1,3 @@
-import base64
-import binascii
-
 from lib.solver import Solver
 
 VALUE = "value"
@@ -79,6 +76,31 @@ def get_str_value(input_str):
             total_value += english_letter_values[letter]
 
     return total_value
+
+
+def repeating_key_xor_cipher_str(smart_string, key):
+    string_bytes = smart_string.get_bytes()
+    len_str_bytes = len(string_bytes)
+
+    key_bytes = padded_key_bytes(key, len_str_bytes)
+
+    smart_key = Solver()
+    smart_key.load_bytes(key_bytes)
+
+    result = heXor(smart_string, smart_key)
+    return result
+
+
+def padded_key_bytes(key, len_str):
+    key_len = len(key)
+    key_bytes = bytearray(key, "utf-8")
+
+    new_key = bytearray()
+    for i in range(len_str):
+        key_index = i % key_len
+        new_key.append(key_bytes[key_index])
+
+    return new_key
 
 
 def single_byte_xor_cipher_str(smart_string, best_dict=None):

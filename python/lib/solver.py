@@ -35,7 +35,14 @@ class Solver(object):
         hex_str = ""
         for byte in self._bytes:
             _hex = hex(byte)
-            hex_str += _hex[2:]
+            len_hex = len(_hex)
+
+            if len_hex % 2:
+                clean_hex = "{}{}".format("0", _hex[2:])
+            else:
+                clean_hex = "{}".format(_hex[2:])
+
+            hex_str += clean_hex
 
         return hex_str
 
