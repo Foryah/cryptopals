@@ -1,7 +1,7 @@
 import base64
 import binascii
-from lib.solver import Solver
 
+from lib.solver import Solver
 
 VALUE = "value"
 STRING = "string"
@@ -29,32 +29,6 @@ english_letter_values = {"e": 13,
                          "b": 1,
                          "g": 1,
                          "v": 1}
-
-
-def int2hex(int_val):
-    b16_str = int("{0:x}".format(int_val), 16)
-    return hex(b16_str)
-
-
-def hex2hex_str(hex_val):
-    return str(hex_val[2:])
-
-
-def hex_str2int(hex_str):
-    return int(hex_str, 16)
-
-
-def bin_str2hex_str(bin_str):
-    return binascii.hexlify(bin_str)
-
-
-def hex_str2bin_str(hex_str):
-    return binascii.unhexlify(hex_str)
-
-
-def hex_str2b64_str(hex_str):
-    bin_str = hex_str2bin_str(hex_str)
-    return base64.b64encode(bin_str)
 
 # TODO: Maybe this logic should not be here... Maybe another object that
 # knows how to talk with the Solver
