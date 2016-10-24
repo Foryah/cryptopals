@@ -45,7 +45,7 @@ class TestSet1(unittest.TestCase):
 
         self.assertEqual(result_str, "Now that the party is jumping\n")
 
-    def test_challange5(self):
+    def _test_challange5(self):
         smart_input = Solver()
         input_str = "Burning 'em, if you ain't quick and nimble\nI go crazy when I hear a cymbal"
         smart_input.load_str(input_str)
@@ -56,7 +56,7 @@ class TestSet1(unittest.TestCase):
 
         self.assertEqual(result_str, "0b3637272a2b2e63622c2e69692a23693a2a3c6324202d623d63343c2a26226324272765272a282b2f20430a652e2c652a3124333a653e2b2027630c692b20283165286326302e27282f")
 
-    def test_hamming(self):
+    def _test_hamming(self):
         smart_1 = Solver()
         str1 = "this is a test"
         smart_1.load_str(str1)
@@ -67,6 +67,26 @@ class TestSet1(unittest.TestCase):
 
         distance = set1.hamming_distance(smart_1, smart_2)
         self.assertEqual(distance, 37)
+
+    def test_break_known_key_length(self):
+        smart_input = Solver()
+        input_str = "SPEAKSOFTLYANDCARRYABIGSTICKYOUWILLGOFAR"
+        smart_input.load_str(input_str)
+
+        key = "SECRET"
+        key_length = len(key)
+
+        encripted_b64_str = "ABUGEw4HHAMXHhwVHQEAExcGCgQBGwIHBwwAGRwbBhIKHgkTHAMCAA=="
+
+        encripted_smart_str = set1.repeating_key_xor_cipher_str(smart_input, key)
+        encripted_result = encripted_smart_str.get_b64()
+
+        self.assertEqual(encripted_result, encripted_b64_str)
+
+        recovered_key = set1.recover_key_based_on_length(encripted_smart_str, key_length)
+
+        self.assertEqual(recovered_key, key)
+
 
 if __name__ == '__main__':
     unittest.main()

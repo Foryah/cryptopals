@@ -148,3 +148,43 @@ def hamming_distance(smart1, smart2):
             diff_bits += 1
 
     return diff_bits
+
+
+def recover_key_based_on_length(encripted_smart, key_length):
+    # 1. Get the modulo letters
+    encripted_str = encripted_smart.get_str()
+    letters = []
+    for i in range(key_length):
+        sub_string = encripted_str[i::key_length]
+        letters.append(sub_string)
+
+    # 2. Try to decript using the best decryption
+    decrypted_keys = []
+    for letter_substring in letters:
+        smart_str = Solver()
+        smart_str.load_str(letter_substring)
+
+        best_dict = single_byte_xor_cipher_str(smart_str)
+        print(best_dict)
+        key = best_dict['key']
+
+        decrypted_keys.append(key)
+
+    # 3. Construct the key
+    final_key = ""
+    for key in decrypted_keys:
+        final_key += chr(key)
+
+    # 4. Retrun the key
+    return final_key
+
+initial_str = "This string is to short to be good"
+initial_smart = Solver()
+initial_smart.load_str(initial_str)
+
+key = "Boy"
+
+encrypted_smart = repeating_key_xor_cipher_str(initial_smart, key)
+
+recovered_key = recover_key_based_on_length(encrypted_smart, len(key))
+print(recovered_key)
