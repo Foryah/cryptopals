@@ -1,4 +1,6 @@
 ## The Matasano crypto challenges
+[![Code Climate](https://codeclimate.com/github/Foryah/cryptopals/badges/gpa.svg)](https://codeclimate.com/github/Foryah/cryptopals)
+
 
 |    [Set 1][set1]   |     Go Solution   |  Elixir Solution  |    C Solution    |      Python      |
 |--------------------|-------------------|-------------------|------------------|------------------|
