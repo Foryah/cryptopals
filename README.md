@@ -1,7 +1,6 @@
 ## The Matasano crypto challenges
 [![Code Climate](https://codeclimate.com/github/Foryah/cryptopals/badges/gpa.svg)](https://codeclimate.com/github/Foryah/cryptopals)
 
-|----------------------------------------------------------------------------------------------------------------------|
 |    [Set 1][set1]   |     Go Solution   |  Elixir Solution  |    C Solution    |      Python      |         C#        |
 |--------------------|-------------------|-------------------|------------------|------------------|-------------------|
 | [Challange 1][ch1] |  [Solved][ch1go]  |  [Solved][ch1el]  | [Unsolved][ch1c] |  [Solved][ch1p]  |  [Solved][ch1cs]  |
@@ -12,7 +11,6 @@
 | [Challange 6][ch6] | [Unsolved][ch6go] | [Unsolved][ch6el] | [Unsolved][ch6c] | [Unsolved][ch6p] | [Unsolved][ch6cs] |
 | [Challange 7][ch7] | [Unsolved][ch7go] | [Unsolved][ch7el] | [Unsolved][ch7c] | [Unsolved][ch7p] | [Unsolved][ch7cs] |
 | [Challange 8][ch8] | [Unsolved][ch8go] | [Unsolved][ch8el] | [Unsolved][ch8c] | [Unsolved][ch8p] | [Unsolved][ch8cs] |
-|----------------------------------------------------------------------------------------------------------------------|
 
 [set1]: http://cryptopals.com/sets/1
 
