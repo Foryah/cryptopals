@@ -1,0 +1,14 @@
+/home/david/Projects/cryptopals/csharp/obj/Debug/netcoreapp2.1/Set1.csprojAssemblyReference.cache
+/home/david/Projects/cryptopals/csharp/obj/Debug/netcoreapp2.1/Set1.csproj.CoreCompileInputs.cache
+/home/david/Projects/cryptopals/csharp/obj/Debug/netcoreapp2.1/Set1.AssemblyInfoInputs.cache
+/home/david/Projects/cryptopals/csharp/obj/Debug/netcoreapp2.1/Set1.AssemblyInfo.cs
+/home/david/Projects/cryptopals/csharp/bin/Debug/netcoreapp2.1/Set1.deps.json
+/home/david/Projects/cryptopals/csharp/bin/Debug/netcoreapp2.1/Set1.runtimeconfig.json
+/home/david/Projects/cryptopals/csharp/bin/Debug/netcoreapp2.1/Set1.runtimeconfig.dev.json
+/home/david/Projects/cryptopals/csharp/bin/Debug/netcoreapp2.1/Set1.dll
+/home/david/Projects/cryptopals/csharp/bin/Debug/netcoreapp2.1/Set1.pdb
+/home/david/Projects/cryptopals/csharp/obj/Debug/netcoreapp2.1/Set1.dll
+/home/david/Projects/cryptopals/csharp/obj/Debug/netcoreapp2.1/Set1.pdb
+/home/david/Projects/cryptopals/csharp/bin/Debug/netcoreapp2.1/xunit.runner.visualstudio.dotnetcore.testadapter.dll
+/home/david/Projects/cryptopals/csharp/bin/Debug/netcoreapp2.1/xunit.runner.reporters.netcoreapp10.dll
+/home/david/Projects/cryptopals/csharp/bin/Debug/netcoreapp2.1/xunit.runner.utility.netcoreapp10.dll
