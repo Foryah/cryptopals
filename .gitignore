@@ -2,4 +2,6 @@ __pycache__
 *.swp
 *.o
 *.out
-.mypy_cache
+*.mypy_cache
+csharp/bin/*
+csharp/obj/*
