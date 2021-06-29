@@ -1,0 +1,10 @@
+cargo-features = ["edition2021"]
+
+[package]
+name = "cryptopals"
+version = "0.1.0"
+authors = ["David Suilea <david.suilea@gmail.com>"]
+edition = "2021"
+
+[dependencies]
+rustc-serialize = "0.3"
