@@ -4,7 +4,8 @@ use lib::{
     hex_to_b64,
     hex_to_str,
     xor_two_str,
-    str_to_hex
+    str_to_hex,
+    find_one_byte_cypher
 };
 
 fn chal1() {
@@ -27,9 +28,20 @@ fn chal2() {
     println!("------------------------------------");
 }
 
+fn chal3() {
+    println!("\nChallenge 3");
+    println!("------------------------------------");
+    let (xor_cypher, output) = find_one_byte_cypher("1b37373331363f78151b7f2b783431333d78397828372d363c78373e783a393b3736");
+    println!("Cypher\t\t{}", xor_cypher);
+    println!("Text\t\t{}", output);
+    println!("------------------------------------");
+}
+
+
 fn main() {
     println!("Set 1");
     println!("====================================");
     chal1();
     chal2();
+    chal3();
 }
