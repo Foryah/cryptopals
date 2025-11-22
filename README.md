@@ -1,10 +1,10 @@
 ## The Matasano crypto challenges
 [![Code Climate](https://codeclimate.com/github/Foryah/cryptopals/badges/gpa.svg)](https://codeclimate.com/github/Foryah/cryptopals)
 
-|    [Set 1][set1]   |     Go Solution   |  Elixir Solution  |       Rust       |      Python      |         C#        |
+|    [Set 1][set1]   |     Go Solution   |  Elixir Solution  |       Rust       |      Python      | C#                |
 |--------------------|-------------------|-------------------|------------------|------------------|-------------------|
-| [Challenge 1][ch1] |  [Solved][ch1go]  |  [Solved][ch1el]  | [Unsolved][ch1r] |  [Solved][ch1p]  |  [Solved][ch1cs]  |
-| [Challenge 2][ch2] |  [Solved][ch2go]  |  [Solved][ch2el]  | [Unsolved][ch2r] |  [Solved][ch2p]  | [Unsolved][ch2cs] |
+| [Challenge 1][ch1] |  [Solved][ch1go]  |  [Solved][ch1el]  | [Unsolved][ch1r] |  [Solved][ch1p]  | [Solved][ch1cs]   |
+| [Challenge 2][ch2] |  [Solved][ch2go]  |  [Solved][ch2el]  | [Unsolved][ch2r] |  [Solved][ch2p]  | [Solved][ch2cs]   |
 | [Challenge 3][ch3] |  [Solved][ch3go]  |  [Solved][ch3el]  | [Unsolved][ch3r] |  [Solved][ch3p]  | [Unsolved][ch3cs] |
 | [Challenge 4][ch4] | [Unsolved][ch4go] | [Unsolved][ch4el] | [Unsolved][ch4r] |  [Solved][ch4p]  | [Unsolved][ch4cs] |
 | [Challenge 5][ch5] | [Unsolved][ch5go] | [Unsolved][ch5el] | [Unsolved][ch5r] |  [Solved][ch5p]  | [Unsolved][ch5cs] |
@@ -26,7 +26,7 @@
 [ch2el]: https://github.com/Foryah/cryptopals/commit/6ad070eec993e99d0965fd0a1adfc7340695e27b
 [ch2r]: #
 [ch2p]: https://github.com/Foryah/cryptopals/commit/2529116ee0e281bf4690c576068839643a527ba2
-[ch2cs]: https://github.com/Foryah/cryptopals/commit/011abc1c0b85afd2426157250dcb51d86eb784c2
+[ch2cs]: https://github.com/Foryah/cryptopals/commit/75d0dd555693d9b2d5f494641443680dfe5f2698
 
 [ch3]: http://cryptopals.com/sets/1/challenges/3
 [ch3go]: https://github.com/Foryah/cryptopals/commit/60cae0a4cd42430bd4eba9415d05b08e9195a75f
