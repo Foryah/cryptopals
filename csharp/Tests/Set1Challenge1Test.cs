@@ -1,9 +1,8 @@
-// This file was auto-generated based on version 1.4.0 of the canonical data.
-
 using Xunit;
-using Set1;
 
-public class Set1Test
+namespace Cryptopals.Tests;
+
+public class Set1Challenge1Test
 {
     [Fact]
     public void Hex_to_string()
