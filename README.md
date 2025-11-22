@@ -74,7 +74,7 @@
 
 |     [Set 2][set2]    | Go Solution        | Elixir Solution    | Rust              | Python            | C#                 |
 |----------------------|--------------------|--------------------|-------------------|-------------------|--------------------|
-| [Challenge 9][ch9]   | [Unsolved][ch9go]  | [Unsolved][ch9el]  | [Unsolved][ch9r]  | [Unsolved][ch9p]  | [Unsolved][ch9cs]  |
+| [Challenge 9][ch9]   | [Unsolved][ch9go]  | [Unsolved][ch9el]  | [Unsolved][ch9r]  | [Unsolved][ch9p]  | [Solved][ch9cs]    |
 | [Challenge 10][ch10] | [Unsolved][ch10go] | [Unsolved][ch10el] | [Unsolved][ch10r] | [Unsolved][ch10p] | [Unsolved][ch10cs] |
 | [Challenge 11][ch11] | [Unsolved][ch11go] | [Unsolved][ch11el] | [Unsolved][ch11r] | [Unsolved][ch11p] | [Unsolved][ch11cs] |
 | [Challenge 12][ch12] | [Unsolved][ch12go] | [Unsolved][ch12el] | [Unsolved][ch12r] | [Unsolved][ch12p] | [Unsolved][ch12cs] |
@@ -90,7 +90,7 @@
 [ch9el]: #
 [ch9r]: #
 [ch9p]: #
-[ch9cs]: #
+[ch9cs]: https://github.com/Foryah/cryptopals/commit/9753947568294fbc937a0fe4a8afeea01772a8ee
 
 [ch10]: http://cryptopals.com/sets/2/challenges/10
 [ch10go]: #
