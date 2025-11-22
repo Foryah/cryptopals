@@ -1,5 +1,7 @@
 using System;
+using System.IO;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 
 namespace Cryptopals.Extensions;
@@ -41,5 +43,22 @@ public static class BytesExtensions
         }
 
         return bytes.Xor(sameLengthKey);
+    }
+
+    public static int GetHammingDistance(this byte[] bytes, byte[] targetBytes)
+    {
+        if (bytes.Length != targetBytes.Length)
+        {
+            throw new InvalidDataException("Inputs must have the same length");
+        }
+
+        var distance = 0;
+        for (var i = 0; i < bytes.Length; i++)
+        {
+            var xorResult = bytes[i] ^ targetBytes[i]; // Only different bits will be 1
+            distance += BitOperations.PopCount((byte)xorResult);
+        }
+
+        return distance;
     }
 }
