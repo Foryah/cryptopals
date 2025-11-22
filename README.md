@@ -19,35 +19,35 @@
 [ch1el]: https://github.com/Foryah/cryptopals/commit/2c46cc983b31a27fce9584f0f2f9f2b0e68343a6
 [ch1r]: #
 [ch1p]: https://github.com/Foryah/cryptopals/commit/180bdf83177b35ff0a3a39013fc6c625012c52a6
-[ch1cs]: https://github.com/Foryah/cryptopals/commit/f86035e2b0a340d4f99524fddcef6c362d2e8b28
+[ch1cs]: https://github.com/Foryah/cryptopals/commit/97b578b38e9d666c326724c0c4a76c5c78141552
 
 [ch2]: http://cryptopals.com/sets/1/challenges/2
 [ch2go]: https://github.com/Foryah/cryptopals/commit/e8105e94851fff5429481dfdcf95ffeb8765850f
 [ch2el]: https://github.com/Foryah/cryptopals/commit/6ad070eec993e99d0965fd0a1adfc7340695e27b
 [ch2r]: #
 [ch2p]: https://github.com/Foryah/cryptopals/commit/2529116ee0e281bf4690c576068839643a527ba2
-[ch2cs]: https://github.com/Foryah/cryptopals/commit/75d0dd555693d9b2d5f494641443680dfe5f2698
+[ch2cs]: https://github.com/Foryah/cryptopals/commit/67a62c7b4349e0cb510e67311c8a8dc1282a5316
 
 [ch3]: http://cryptopals.com/sets/1/challenges/3
 [ch3go]: https://github.com/Foryah/cryptopals/commit/60cae0a4cd42430bd4eba9415d05b08e9195a75f
 [ch3el]: https://github.com/Foryah/cryptopals/commit/d661039b82eb6783575b29b6b344357442925e83
 [ch3r]: #
 [ch3p]: https://github.com/Foryah/cryptopals/commit/41818620e39c0425f420f977a170082c4ad207c4
-[ch3cs]: https://github.com/Foryah/cryptopals/commit/5af64fcf4862196301e7023a2bc0534f03c4d198
+[ch3cs]: https://github.com/Foryah/cryptopals/commit/8e696186c30ab51f66d63650d2538217f96e3e34
 
 [ch4]: http://cryptopals.com/sets/1/challenges/4
 [ch4go]: #
 [ch4el]: #
 [ch4r]: #
 [ch4p]: https://github.com/Foryah/cryptopals/commit/5889e445f3ca4927233957a33b21892c31793602
-[ch4cs]: https://github.com/Foryah/cryptopals/commit/b7297500f7670b446c6ca56fb6a48d4dcc6e38df
+[ch4cs]: https://github.com/Foryah/cryptopals/commit/fe51b1f6aaf13eb7a56326f78bb8c817f49f4d03
 
 [ch5]: http://cryptopals.com/sets/1/challenges/5
 [ch5go]: #
 [ch5el]: #
 [ch5r]: #
 [ch5p]: https://github.com/Foryah/cryptopals/commit/055b57c9ca55912e0689a2c9537c9c6b2c43a8fc
-[ch5cs]: https://github.com/Foryah/cryptopals/commit/df646fc5d33e8c8309939b76d98268a1f583e9a6
+[ch5cs]: https://github.com/Foryah/cryptopals/commit/4d80f52f519f60fe077447e7b9e2ee1572811fec
 
 
 [ch6]: http://cryptopals.com/sets/1/challenges/6
@@ -55,21 +55,21 @@
 [ch6el]: #
 [ch6r]: #
 [ch6p]: #
-[ch6cs]: https://github.com/Foryah/cryptopals/commit/bec9218c1358b669bdf50f6347a04ef37c2ce458
+[ch6cs]: https://github.com/Foryah/cryptopals/commit/ea30c82ffb75dd32a83a1335e9c939747fd2afb0
 
 [ch7]: http://cryptopals.com/sets/1/challenges/7
 [ch7go]: #
 [ch7el]: #
 [ch7r]: #
 [ch7p]: #
-[ch7cs]: https://github.com/Foryah/cryptopals/commit/05f96fd4a6aceaeab8160067a49291e50c13a915
+[ch7cs]: https://github.com/Foryah/cryptopals/commit/4a7c17ee47ab663764b265af1a4282037f870fc1
 
 [ch8]: http://cryptopals.com/sets/1/challenges/8
 [ch8go]: #
 [ch8el]: #
 [ch8r]: #
 [ch8p]: #
-[ch8cs]: https://github.com/Foryah/cryptopals/commit/92914769c3223ff6caa93163225c52b8a147726e
+[ch8cs]: https://github.com/Foryah/cryptopals/commit/f5309baf307476ca9193c0eb6b1bdd46bde34f98
 
 
 |     [Set 2][set2]    | Go Solution        | Elixir Solution    | Rust              | Python            | C#                 |
@@ -90,7 +90,7 @@
 [ch9el]: #
 [ch9r]: #
 [ch9p]: #
-[ch9cs]: https://github.com/Foryah/cryptopals/commit/9753947568294fbc937a0fe4a8afeea01772a8ee
+[ch9cs]: https://github.com/Foryah/cryptopals/commit/2e4d17e21b2024631f78c10be040ced602441443
 
 [ch10]: http://cryptopals.com/sets/2/challenges/10
 [ch10go]: #
