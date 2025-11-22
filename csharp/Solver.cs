@@ -1,4 +1,4 @@
-using Cryptopals.Helpers;
+using Cryptopals.Extensions;
 
 namespace Cryptopals;
 
@@ -6,24 +6,22 @@ public static class Solver
 {
     public static string HexToAscii(string hexInput)
     {
-        BaseChanger bChanger = new BaseChanger(hexInput, StringType.Hex);
-        return bChanger.ToAscii();
+        var inputBytes = hexInput.HexToBytes();
+        return inputBytes.ToAscii();
     }
 
     public static string HexToBase64(string hexInput)
     {
-        BaseChanger bChanger = new BaseChanger(hexInput, StringType.Hex);
-        return bChanger.ToBase64();
+        var inputBytes = hexInput.HexToBytes();
+        return inputBytes.ToBase64();
     }
 
     public static string XorEqualHexes(string hexInput, string hexKey)
     {
-        BaseChanger inputBaseChanger = new BaseChanger(hexInput, StringType.Hex);
-        BaseChanger keyBaseChanger = new BaseChanger(hexKey, StringType.Hex);
+        var inputBaseChanger = hexInput.HexToBytes();
+        var keyBaseChanger = hexKey.HexToBytes();
 
-        HeXor hexxor = new HeXor(inputBaseChanger);
-        var xoredBaseChanger = hexxor.Xor(keyBaseChanger);
-
-        return xoredBaseChanger.ToHex();
+        var xoredBytes = inputBaseChanger.Xor(keyBaseChanger);
+        return xoredBytes.ToHex();
     }
 }
