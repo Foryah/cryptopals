@@ -19,7 +19,7 @@
 [ch1el]: https://github.com/Foryah/cryptopals/commit/2c46cc983b31a27fce9584f0f2f9f2b0e68343a6
 [ch1r]: #
 [ch1p]: https://github.com/Foryah/cryptopals/commit/180bdf83177b35ff0a3a39013fc6c625012c52a6
-[ch1cs]: https://github.com/Foryah/cryptopals/commit/4685cce8cecec8d31804380272a3d00fdbcb6b30
+[ch1cs]: https://github.com/Foryah/cryptopals/commit/f86035e2b0a340d4f99524fddcef6c362d2e8b28
 
 [ch2]: http://cryptopals.com/sets/1/challenges/2
 [ch2go]: https://github.com/Foryah/cryptopals/commit/e8105e94851fff5429481dfdcf95ffeb8765850f
