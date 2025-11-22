@@ -8,6 +8,15 @@ namespace Cryptopals;
 
 public static class Solver
 {
+    public static string EncryptWithRepeatingKeyToHex(string asciiText, string key)
+    {
+        var plainTextBytes = asciiText.AsciiToBytes();
+        var keyBytes = key.AsciiToBytes();
+
+        var encryptedBytes = plainTextBytes.XorWithRepeatedKey(keyBytes);
+        return encryptedBytes.ToHex();
+    }
+
     public static DecryptedMessageWithSingleCharKey FindMessageInFile(string filePath)
     {
         DecryptedMessageWithSingleCharKey? bestDecryptedMessageOverall = null;
@@ -22,7 +31,7 @@ public static class Solver
 
         return bestDecryptedMessageOverall!;
     }
-    
+
     public static DecryptedMessageWithSingleCharKey DecryptWithSingleCharKey(string hexInput)
     {
         var inputBytes = hexInput.HexToBytes();
@@ -31,7 +40,7 @@ public static class Solver
         var potentialKeys = Enumerable.Range(0, 256).Select(b => (byte)b).ToList();
         foreach (var key in potentialKeys)
         {
-            var decryptedMessage = inputBytes.DecryptWithSingleCharKey(key);
+            var decryptedMessage = inputBytes.XorWithSingleCharKey(key);
             var englishConfidenceScore = EnglishFrequencyAnalyzer.CalculateEnglishConfidenceScore(decryptedMessage.ToAscii());
 
             if (bestDecryptedMessage == null || englishConfidenceScore > bestDecryptedMessage.ConfidenceScore)
