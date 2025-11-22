@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -10,6 +9,15 @@ namespace Cryptopals;
 
 public static class Solver
 {
+    public static string DecryptAES128InECBMode(string filePath, string key)
+    {
+        var encryptedB64Text = File.ReadAllText(filePath);
+        var encryptedText = encryptedB64Text.Base64ToBytes();
+
+        var decryptedBytes = encryptedText.AES128InECBDecrypt(key.AsciiToBytes());
+        return decryptedBytes.ToAscii();
+    }
+
     public static DecryptedMessageWithKey DecryptRepeatedKeyXoredFile(string filePath)
     {
         var encryptedB64Text = File.ReadAllText(filePath);

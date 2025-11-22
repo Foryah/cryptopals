@@ -3,6 +3,7 @@ using System.IO;
 using System.Linq;
 using System.Numerics;
 using System.Text;
+using System.Security.Cryptography;
 
 namespace Cryptopals.Extensions;
 
@@ -60,5 +61,16 @@ public static class BytesExtensions
         }
 
         return distance;
+    }
+
+    public static byte[] AES128InECBDecrypt(this byte[] bytes, byte[] key)
+    {
+        using var aes = Aes.Create();
+        aes.Key = key;
+        aes.Mode = CipherMode.ECB;
+        aes.Padding = PaddingMode.PKCS7;
+
+        using var decryptor = aes.CreateDecryptor();
+        return decryptor.TransformFinalBlock(bytes, 0, bytes.Length);
     }
 }
