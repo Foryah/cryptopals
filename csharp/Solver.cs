@@ -9,6 +9,13 @@ namespace Cryptopals;
 
 public static class Solver
 {
+    public static string PKCS7Pad(string asciiString, int blockSize = 20)
+    {
+        var asciiBytes = asciiString.AsciiToBytes();
+        var paddedBytes = asciiBytes.PKCS7Pad(blockSize);
+        return paddedBytes.ToAscii();
+    }
+
     public static CipherTextWithHammingDistance FindAES128ECBEncryptedBlockInFile(string filePath)
     {
         var cipherTextWithHammingDistances = new List<CipherTextWithHammingDistance>();

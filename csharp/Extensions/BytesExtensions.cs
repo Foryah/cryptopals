@@ -73,4 +73,18 @@ public static class BytesExtensions
         using var decryptor = aes.CreateDecryptor();
         return decryptor.TransformFinalBlock(bytes, 0, bytes.Length);
     }
+
+    public static byte[] PKCS7Pad(this byte[] bytes, int blockSize)
+    {
+        var paddingRequired = blockSize - (bytes.Length % blockSize);
+        var paddedBytes = new byte[bytes.Length + paddingRequired];
+
+        Array.Copy(bytes, paddedBytes, bytes.Length);
+        for (var i = bytes.Length; i < paddedBytes.Length; i++)
+        {
+            paddedBytes[i] = (byte)paddingRequired;
+        }
+
+        return paddedBytes;
+    }
 }
