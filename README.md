@@ -7,7 +7,7 @@
 | [Challenge 2][ch2] |  [Solved][ch2go]  |  [Solved][ch2el]  | [Unsolved][ch2r] |  [Solved][ch2p]  | [Solved][ch2cs]   |
 | [Challenge 3][ch3] |  [Solved][ch3go]  |  [Solved][ch3el]  | [Unsolved][ch3r] |  [Solved][ch3p]  | [Solved][ch3cs]   |
 | [Challenge 4][ch4] | [Unsolved][ch4go] | [Unsolved][ch4el] | [Unsolved][ch4r] |  [Solved][ch4p]  | [Solved][ch4cs]   |
-| [Challenge 5][ch5] | [Unsolved][ch5go] | [Unsolved][ch5el] | [Unsolved][ch5r] |  [Solved][ch5p]  | [Unsolved][ch5cs] |
+| [Challenge 5][ch5] | [Unsolved][ch5go] | [Unsolved][ch5el] | [Unsolved][ch5r] |  [Solved][ch5p]  | [Solved][ch5cs]   |
 | [Challenge 6][ch6] | [Unsolved][ch6go] | [Unsolved][ch6el] | [Unsolved][ch6r] | [Unsolved][ch6p] | [Unsolved][ch6cs] |
 | [Challenge 7][ch7] | [Unsolved][ch7go] | [Unsolved][ch7el] | [Unsolved][ch7r] | [Unsolved][ch7p] | [Unsolved][ch7cs] |
 | [Challenge 8][ch8] | [Unsolved][ch8go] | [Unsolved][ch8el] | [Unsolved][ch8r] | [Unsolved][ch8p] | [Unsolved][ch8cs] |
@@ -47,7 +47,7 @@
 [ch5el]: #
 [ch5r]: #
 [ch5p]: https://github.com/Foryah/cryptopals/commit/055b57c9ca55912e0689a2c9537c9c6b2c43a8fc
-[ch5cs]: #
+[ch5cs]: https://github.com/Foryah/cryptopals/commit/df646fc5d33e8c8309939b76d98268a1f583e9a6
 
 
 [ch6]: http://cryptopals.com/sets/1/challenges/6
