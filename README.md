@@ -1,16 +1,16 @@
 ## The Matasano crypto challenges
 [![Code Climate](https://codeclimate.com/github/Foryah/cryptopals/badges/gpa.svg)](https://codeclimate.com/github/Foryah/cryptopals)
 
-|    [Set 1][set1]   |     Go Solution   |  Elixir Solution  |       Rust       |      Python      | C#                |
-|--------------------|-------------------|-------------------|------------------|------------------|-------------------|
-| [Challenge 1][ch1] |  [Solved][ch1go]  |  [Solved][ch1el]  | [Unsolved][ch1r] |  [Solved][ch1p]  | [Solved][ch1cs]   |
-| [Challenge 2][ch2] |  [Solved][ch2go]  |  [Solved][ch2el]  | [Unsolved][ch2r] |  [Solved][ch2p]  | [Solved][ch2cs]   |
-| [Challenge 3][ch3] |  [Solved][ch3go]  |  [Solved][ch3el]  | [Unsolved][ch3r] |  [Solved][ch3p]  | [Solved][ch3cs]   |
-| [Challenge 4][ch4] | [Unsolved][ch4go] | [Unsolved][ch4el] | [Unsolved][ch4r] |  [Solved][ch4p]  | [Solved][ch4cs]   |
-| [Challenge 5][ch5] | [Unsolved][ch5go] | [Unsolved][ch5el] | [Unsolved][ch5r] |  [Solved][ch5p]  | [Solved][ch5cs]   |
-| [Challenge 6][ch6] | [Unsolved][ch6go] | [Unsolved][ch6el] | [Unsolved][ch6r] | [Unsolved][ch6p] | [Solved][ch6cs]   |
-| [Challenge 7][ch7] | [Unsolved][ch7go] | [Unsolved][ch7el] | [Unsolved][ch7r] | [Unsolved][ch7p] | [Solved][ch7cs]   |
-| [Challenge 8][ch8] | [Unsolved][ch8go] | [Unsolved][ch8el] | [Unsolved][ch8r] | [Unsolved][ch8p] | [Unsolved][ch8cs] |
+|    [Set 1][set1]   |     Go Solution   |  Elixir Solution  |       Rust       |      Python      | C#              |
+|--------------------|-------------------|-------------------|------------------|------------------|-----------------|
+| [Challenge 1][ch1] |  [Solved][ch1go]  |  [Solved][ch1el]  | [Unsolved][ch1r] |  [Solved][ch1p]  | [Solved][ch1cs] |
+| [Challenge 2][ch2] |  [Solved][ch2go]  |  [Solved][ch2el]  | [Unsolved][ch2r] |  [Solved][ch2p]  | [Solved][ch2cs] |
+| [Challenge 3][ch3] |  [Solved][ch3go]  |  [Solved][ch3el]  | [Unsolved][ch3r] |  [Solved][ch3p]  | [Solved][ch3cs] |
+| [Challenge 4][ch4] | [Unsolved][ch4go] | [Unsolved][ch4el] | [Unsolved][ch4r] |  [Solved][ch4p]  | [Solved][ch4cs] |
+| [Challenge 5][ch5] | [Unsolved][ch5go] | [Unsolved][ch5el] | [Unsolved][ch5r] |  [Solved][ch5p]  | [Solved][ch5cs] |
+| [Challenge 6][ch6] | [Unsolved][ch6go] | [Unsolved][ch6el] | [Unsolved][ch6r] | [Unsolved][ch6p] | [Solved][ch6cs] |
+| [Challenge 7][ch7] | [Unsolved][ch7go] | [Unsolved][ch7el] | [Unsolved][ch7r] | [Unsolved][ch7p] | [Solved][ch7cs] |
+| [Challenge 8][ch8] | [Unsolved][ch8go] | [Unsolved][ch8el] | [Unsolved][ch8r] | [Unsolved][ch8p] | [Solved][ch8cs] |
 
 [set1]: http://cryptopals.com/sets/1
 
@@ -69,4 +69,4 @@
 [ch8el]: #
 [ch8r]: #
 [ch8p]: #
-[ch8cs]: #
+[ch8cs]: https://github.com/Foryah/cryptopals/commit/92914769c3223ff6caa93163225c52b8a147726e
