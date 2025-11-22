@@ -1,3 +1,4 @@
+using System.IO;
 using System.Linq;
 using Cryptopals.Extensions;
 using Cryptopals.Helpers;
@@ -7,6 +8,21 @@ namespace Cryptopals;
 
 public static class Solver
 {
+    public static DecryptedMessageWithSingleCharKey FindMessageInFile(string filePath)
+    {
+        DecryptedMessageWithSingleCharKey? bestDecryptedMessageOverall = null;
+        foreach (string line in File.ReadLines(filePath))
+        {
+            var decryptedMessage = DecryptWithSingleCharKey(line);
+            if (bestDecryptedMessageOverall == null || decryptedMessage.ConfidenceScore > bestDecryptedMessageOverall.ConfidenceScore)
+            {
+                bestDecryptedMessageOverall = decryptedMessage;
+            }
+        }
+
+        return bestDecryptedMessageOverall!;
+    }
+    
     public static DecryptedMessageWithSingleCharKey DecryptWithSingleCharKey(string hexInput)
     {
         var inputBytes = hexInput.HexToBytes();

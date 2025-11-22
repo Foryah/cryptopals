@@ -2,7 +2,7 @@ namespace Cryptopals.Helpers;
 
 public static class EnglishFrequencyAnalyzer
 {
-    private static readonly string EnglishLettersByFrequency = "etaoinshrdlcumwfgypbvkjxqz";
+    private static readonly string EnglishLettersByFrequency = "etaoinshrd lcumwfgypbvkjxqz";
 
     public static int CalculateEnglishConfidenceScore(string input)
     {
