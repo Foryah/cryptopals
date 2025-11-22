@@ -1,9 +1,32 @@
+using System.Linq;
 using Cryptopals.Extensions;
+using Cryptopals.Helpers;
+using Cryptopals.Models;
 
 namespace Cryptopals;
 
 public static class Solver
 {
+    public static DecryptedMessageWithSingleCharKey DecryptWithSingleCharKey(string hexInput)
+    {
+        var inputBytes = hexInput.HexToBytes();
+
+        DecryptedMessageWithSingleCharKey? bestDecryptedMessage = null;
+        var potentialKeys = Enumerable.Range(0, 256).Select(b => (byte)b).ToList();
+        foreach (var key in potentialKeys)
+        {
+            var decryptedMessage = inputBytes.DecryptWithSingleCharKey(key);
+            var englishConfidenceScore = EnglishFrequencyAnalyzer.CalculateEnglishConfidenceScore(decryptedMessage.ToAscii());
+
+            if (bestDecryptedMessage == null || englishConfidenceScore > bestDecryptedMessage.ConfidenceScore)
+            {
+                bestDecryptedMessage = new DecryptedMessageWithSingleCharKey(decryptedMessage.ToAscii(), ((char)key).ToString(), englishConfidenceScore);
+            }
+        }
+
+        return bestDecryptedMessage!;
+    }
+
     public static string HexToAscii(string hexInput)
     {
         var inputBytes = hexInput.HexToBytes();

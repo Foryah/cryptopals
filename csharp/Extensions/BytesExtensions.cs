@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using System.Text;
 
 namespace Cryptopals.Extensions;
@@ -23,5 +24,11 @@ public static class BytesExtensions
         }
 
         return output;
+    }
+
+    public static byte[] DecryptWithSingleCharKey(this byte[] bytes, byte key)
+    {
+        var sameLengthKey = bytes.Select(_ => key).ToArray();
+        return bytes.Xor(sameLengthKey);
     }
 }
