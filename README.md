@@ -5,7 +5,7 @@
 |--------------------|-------------------|-------------------|------------------|------------------|-------------------|
 | [Challenge 1][ch1] |  [Solved][ch1go]  |  [Solved][ch1el]  | [Unsolved][ch1r] |  [Solved][ch1p]  | [Solved][ch1cs]   |
 | [Challenge 2][ch2] |  [Solved][ch2go]  |  [Solved][ch2el]  | [Unsolved][ch2r] |  [Solved][ch2p]  | [Solved][ch2cs]   |
-| [Challenge 3][ch3] |  [Solved][ch3go]  |  [Solved][ch3el]  | [Unsolved][ch3r] |  [Solved][ch3p]  | [Unsolved][ch3cs] |
+| [Challenge 3][ch3] |  [Solved][ch3go]  |  [Solved][ch3el]  | [Unsolved][ch3r] |  [Solved][ch3p]  | [Solved][ch3cs]   |
 | [Challenge 4][ch4] | [Unsolved][ch4go] | [Unsolved][ch4el] | [Unsolved][ch4r] |  [Solved][ch4p]  | [Unsolved][ch4cs] |
 | [Challenge 5][ch5] | [Unsolved][ch5go] | [Unsolved][ch5el] | [Unsolved][ch5r] |  [Solved][ch5p]  | [Unsolved][ch5cs] |
 | [Challenge 6][ch6] | [Unsolved][ch6go] | [Unsolved][ch6el] | [Unsolved][ch6r] | [Unsolved][ch6p] | [Unsolved][ch6cs] |
@@ -33,7 +33,7 @@
 [ch3el]: https://github.com/Foryah/cryptopals/commit/d661039b82eb6783575b29b6b344357442925e83
 [ch3r]: #
 [ch3p]: https://github.com/Foryah/cryptopals/commit/41818620e39c0425f420f977a170082c4ad207c4
-[ch3cs]: #
+[ch3cs]: https://github.com/Foryah/cryptopals/commit/5af64fcf4862196301e7023a2bc0534f03c4d198
 
 [ch4]: http://cryptopals.com/sets/1/challenges/4
 [ch4go]: #
