@@ -70,3 +70,73 @@
 [ch8r]: #
 [ch8p]: #
 [ch8cs]: https://github.com/Foryah/cryptopals/commit/92914769c3223ff6caa93163225c52b8a147726e
+
+
+|     [Set 2][set2]    | Go Solution        | Elixir Solution    | Rust              | Python            | C#                 |
+|----------------------|--------------------|--------------------|-------------------|-------------------|--------------------|
+| [Challenge 9][ch9]   | [Unsolved][ch9go]  | [Unsolved][ch9el]  | [Unsolved][ch9r]  | [Unsolved][ch9p]  | [Unsolved][ch9cs]  |
+| [Challenge 10][ch10] | [Unsolved][ch10go] | [Unsolved][ch10el] | [Unsolved][ch10r] | [Unsolved][ch10p] | [Unsolved][ch10cs] |
+| [Challenge 11][ch11] | [Unsolved][ch11go] | [Unsolved][ch11el] | [Unsolved][ch11r] | [Unsolved][ch11p] | [Unsolved][ch11cs] |
+| [Challenge 12][ch12] | [Unsolved][ch12go] | [Unsolved][ch12el] | [Unsolved][ch12r] | [Unsolved][ch12p] | [Unsolved][ch12cs] |
+| [Challenge 13][ch13] | [Unsolved][ch13go] | [Unsolved][ch13el] | [Unsolved][ch13r] | [Unsolved][ch13p] | [Unsolved][ch13cs] |
+| [Challenge 14][ch14] | [Unsolved][ch14go] | [Unsolved][ch14el] | [Unsolved][ch14r] | [Unsolved][ch14p] | [Unsolved][ch14cs] |
+| [Challenge 15][ch15] | [Unsolved][ch15go] | [Unsolved][ch15el] | [Unsolved][ch15r] | [Unsolved][ch15p] | [Unsolved][ch15cs] |
+| [Challenge 16][ch16] | [Unsolved][ch16go] | [Unsolved][ch16el] | [Unsolved][ch16r] | [Unsolved][ch16p] | [Unsolved][ch16cs] |
+
+[set2]: http://cryptopals.com/sets/2
+
+[ch9]: http://cryptopals.com/sets/2/challenges/9
+[ch9go]: #
+[ch9el]: #
+[ch9r]: #
+[ch9p]: #
+[ch9cs]: #
+
+[ch10]: http://cryptopals.com/sets/2/challenges/10
+[ch10go]: #
+[ch10el]: #
+[ch10r]: #
+[ch10p]: #
+[ch10cs]: #
+
+[ch11]: http://cryptopals.com/sets/2/challenges/11
+[ch11go]: #
+[ch11el]: #
+[ch11r]: #
+[ch11p]: #
+[ch11cs]: #
+
+[ch12]: http://cryptopals.com/sets/2/challenges/12
+[ch12go]: #
+[ch12el]: #
+[ch12r]: #
+[ch12p]: #
+[ch12cs]: #
+
+[ch13]: http://cryptopals.com/sets/2/challenges/13
+[ch13go]: #
+[ch13el]: #
+[ch13r]: #
+[ch13p]: #
+[ch13cs]: #
+
+[ch14]: http://cryptopals.com/sets/2/challenges/14
+[ch14go]: #
+[ch14el]: #
+[ch14r]: #
+[ch14p]: #
+[ch14cs]: #
+
+[ch15]: http://cryptopals.com/sets/2/challenges/15
+[ch15go]: #
+[ch15el]: #
+[ch15r]: #
+[ch15p]: #
+[ch15cs]: #
+
+[ch16]: http://cryptopals.com/sets/2/challenges/16
+[ch16go]: #
+[ch16el]: #
+[ch16r]: #
+[ch16p]: #
+[ch16cs]: #
